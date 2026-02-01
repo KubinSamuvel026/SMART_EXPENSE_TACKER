@@ -23,4 +23,4 @@ whitenoise==6.11.0
 gunicorn
 django
 django-cors-headers
-psycopg2-binary   (if using Postgres)
+psycopg2-binary

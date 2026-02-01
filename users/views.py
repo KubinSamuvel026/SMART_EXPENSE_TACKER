@@ -5,11 +5,12 @@ from users.models import User
 from .serializers import RegisterSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .serializers import CustomTokenObtainPairSerializer
-
+from django.http import JsonResponse
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
 
-
+def health(request):
+    return JsonResponse({"status": "ok"})
 class RegisterView(APIView):
     def post(self, request):
         email = request.data.get("email")
@@ -37,3 +38,5 @@ class RegisterView(APIView):
             {"message": "User registered successfully"},
             status=status.HTTP_201_CREATED
         )
+        
+
