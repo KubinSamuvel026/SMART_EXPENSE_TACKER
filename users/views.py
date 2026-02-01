@@ -9,7 +9,8 @@ from django.http import JsonResponse
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
 
-
+def health(request):
+    return JsonResponse({"status": "ok"})
 class RegisterView(APIView):
     def post(self, request):
         email = request.data.get("email")
@@ -38,5 +39,4 @@ class RegisterView(APIView):
             status=status.HTTP_201_CREATED
         )
         
-def health(request):
-    return JsonResponse({"status": "ok"})
+
