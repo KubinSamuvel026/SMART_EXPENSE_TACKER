@@ -29,7 +29,7 @@ DEBUG = os.environ.get("DEBUG", "False") == "True"
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "smart-expense-tracker-jcye.onrender.com"
+    "smart-expense-tacker.onrender.com"
 ]
 
 
