@@ -37,6 +37,6 @@ class RegisterView(APIView):
             {"message": "User registered successfully"},
             status=status.HTTP_201_CREATED
         )
-
-    def health(request):
-        return JsonResponse({"status": "ok"})
+        
+def health(request):
+    return JsonResponse({"status": "ok"})
