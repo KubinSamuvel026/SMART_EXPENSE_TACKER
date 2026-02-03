@@ -27,9 +27,7 @@ SECRET_KEY = 'django-insecure-ek#e-y8@*^-cj@lrbu2+69h&#1i6g(#x&^db*uewdgd7j!j_7n
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    "smart-expense-tacker.onrender.com"
+   "*"
 ]
 
 
