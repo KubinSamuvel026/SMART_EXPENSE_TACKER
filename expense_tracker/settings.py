@@ -150,9 +150,11 @@ SIMPLE_JWT = {
 }
 
 AUTH_USER_MODEL = 'users.User'
-CORS_ALLOW_ALL_ORIGINS = True
 
-
+# CORS Configuration for production
 CORS_ALLOWED_ORIGINS = [
-    "https://your-vercel-app-name.vercel.app"
+    "http://localhost:5173",  # Local development
+    "https://smart-expense-tracker-jcye.onrender.com",  # Render frontend
 ]
+
+CORS_ALLOW_CREDENTIALS = True
