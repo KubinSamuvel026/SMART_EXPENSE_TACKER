@@ -16,9 +16,9 @@ class RegisterView(APIView):
         email = request.data.get("email")
         password = request.data.get("password")
 
-        if not email or not password:
+        if (not email) or (not password):
             return Response(
-                {"error": "1 Email and password required"},
+                {"error": f"{email,password} Email and password required"},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
