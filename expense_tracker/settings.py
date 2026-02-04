@@ -160,7 +160,30 @@ AUTH_USER_MODEL = 'users.User'
 # CORS Configuration for production
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Local development
-    "https://smart-expense-tracker-jcye.onrender.com",  # Render frontend
+    "https://smart-expense-tracker.onrender.com",  # Render frontend
+    "https://smart-expense-tacker.vercel.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "authorization",
+    "content-type",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS",
+]
+CSRF_TRUSTED_ORIGINS = [
+    "https://smart-expense-tacker.vercel.app",
+]
